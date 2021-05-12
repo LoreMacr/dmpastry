@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25">
+    <defs>
+        <filter id="jven29f7ea">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.968627 0 0 0 0 0.615686 0 0 0 0 0.721569 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g filter="url(#jven29f7ea)" transform="translate(-862 -1390) translate(551 1385) translate(311 5)">
+                    <g stroke="#979797" stroke-width="3">
+                        <path stroke-linecap="square" d="M0.458 10.571L19.708 10.571" transform="translate(1.087 1.001)"/>
+                        <g>
+                            <path d="M0.388 0.487L10.437 11.029" transform="translate(1.087 1.001) translate(12.904)"/>
+                            <path d="M0.388 9.654L10.437 21.142" transform="translate(1.087 1.001) translate(12.904) matrix(1 0 0 -1 0 31.225)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
