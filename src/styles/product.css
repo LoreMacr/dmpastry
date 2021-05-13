@@ -153,7 +153,7 @@ h4{
 
 @media screen and (max-width: 865px){
     .product_container{
-        height: 300px;
+        height: 120px;
     }
     .product_content{
         padding: 0; 
@@ -173,6 +173,7 @@ h4{
 
     .info{
         padding: 0 20px;
+        margin-bottom: 60px;
     }
 
     .product_description{

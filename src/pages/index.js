@@ -1,11 +1,10 @@
 import {listCollection} from '../services/db'
 import {useEffect,useState} from 'react'
 import {Link} from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/common/Card'
 import Instagram from '../components/Instagram/Instagram'
-import Cart from '../components/Cart/Cart'
+
 
 
 // const Home = () => {
@@ -53,13 +52,11 @@ function HomePage() {
   
   return (
     <div>
-    <Navbar/>
     <div className="hero" >
           <div className="slider_title h2">
-            <h2>Un dulce antojo</h2>
-          </div>
-          <div className="trans"/>
-          </div>
+            <h2>Un dulce<br/>antojo</h2>
+      </div>   
+    </div>
     <p className='page_titles'>Favoritos</p>
     <div className="content_fav">
     {
@@ -69,7 +66,6 @@ function HomePage() {
       })
     }
     </div>
-    <Cart/>
     <Link className='see_all' to="/productos">Ver todos los pasteles<img className='icon_arrow' src="/img/right.svg"/></Link> 
       <p className='page_titles'>Love</p>
       <div className="container_featured">

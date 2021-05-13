@@ -11,8 +11,7 @@ const Cart = () => {
             </div>
 
             <div className="container_cart">
-            
-                <div className="item"> </div>
+        
                 <div className="delete-btn" >
                 <span class="delete-btn"></span>
                     {/* <img src="/img/delete-icn.png" alt="" /> */}
@@ -23,9 +22,7 @@ const Cart = () => {
                 </div>
                 
                 <div className="description">
-                    <span>Common Projects</span>
-                    <span>Bball High</span>
-                    <span>White</span>
+                    <p>Common Projects</p>
                 </div>
                 
                 <div className="quantity">
@@ -38,9 +35,7 @@ const Cart = () => {
                     </button>
                 </div>
             </div>
-
             <div className="total-price">$549</div>
-        
         </div>                
         
         </>
