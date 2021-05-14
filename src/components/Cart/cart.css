@@ -4,11 +4,26 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  /* position: absolute;
-  right: 0;
-  z-index: 100; */
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.7s;
   }
 
+  .shopping-cart-show{
+    opacity: 1;
+    z-index: 10;
+    transition: all 0.7s;
+  }
+  .cart_content{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+
+  }
   .title_cart {
     height: 60px;
     border-bottom: 1px solid #eee1e1;

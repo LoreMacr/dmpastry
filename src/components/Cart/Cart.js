@@ -2,10 +2,12 @@ import React from 'react'
 import "./cart.css";
 import { useDispatch, useSelector } from 'react-redux'; 
 import { addToCart, removeProduct, decrementProduct} from '../../redux/cart/cartActions';
+import {hidden} from '../../redux/showCart/showCartActions'
 
 const Cart = () => {
     const cart = useSelector ((state) => state.cardData.cartItems);
     const totalAmount = useSelector ((state) => state.cardData.totalAmount);
+    const showCart = useSelector ((state) => state.showCart.value);
     const dispatch = useDispatch();
     // const { id, name, description, prices, photos, category} = product;
     // const cart = useSelector ((state) => state.cardData.cartItems);
@@ -14,7 +16,9 @@ const Cart = () => {
 
     return(
         <>
-        <div className="shopping-cart"> 
+        <div className={`shopping-cart ${showCart ? 'shopping-cart-show' : ''}`}> 
+        <div className="cart_content">
+        <div onClick={() => dispatch(hidden())}>Cerrar</div>
         {cart.map((product) => {
             const { id, name, description, price, photos, category} = product;
             const photo = photos?.[0]
@@ -55,6 +59,7 @@ const Cart = () => {
         })}
         
         <div className="total-price">{totalAmount}</div>
+        </div>
         </div>                
         
         </>

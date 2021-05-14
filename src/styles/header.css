@@ -89,7 +89,9 @@ Link img{
   .navbar_close{
       display: none;
 }
-  
+  .photo_view img{
+    width: 25%;
+  }
   
 .MenuButtonWrapper{
     border: none;

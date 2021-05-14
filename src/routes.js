@@ -18,7 +18,7 @@ const Routes = () => {
   return (
     <Router>
     <Header />
-    {/* <Cart/> */}
+    <Cart/>
     <Switch>
     <Route exact path="/" component={Home}/>
     <Route path="/carrito" component={Cart}/>

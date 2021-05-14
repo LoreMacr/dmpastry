@@ -32,8 +32,7 @@ const [card,setCard]= useState([]);
     return (
         <>
         <Navbar />
-        <div className="content_products">
-        <p className='page_titles'>Todos los productos</p>
+        <p className="content_products page_titles">Todos los productos</p>
         <div className="all_products_cards">
             {
                 card.map((item, index)=>{
@@ -42,7 +41,7 @@ const [card,setCard]= useState([]);
                 })
             }
         </div>
-    </div>
+
         <Footer />
         </>
     )

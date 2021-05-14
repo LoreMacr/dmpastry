@@ -25,6 +25,9 @@ body{
   
 }
 
+.container_infos{
+  margin-top: 20%;
+}
 
 /* SLIDER */
 
@@ -34,6 +37,7 @@ body{
 
 
 .slider_title h2{
+  margin-left: 5%;
   padding: 60px 20px;
   display: flex;
   font-size: 16em;
@@ -68,7 +72,7 @@ p.page_titles{
   justify-content: center;
   align-content: center;
   margin-bottom: 40px;
-  margin-top: 80px;
+  margin-top: 191px;
 }
 
 .product_card{

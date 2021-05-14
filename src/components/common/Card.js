@@ -1,13 +1,9 @@
 import React,{useState} from 'react'
-import { createObjectById } from '../../services/db';
 import { useDispatch, useSelector } from 'react-redux'
 import {Link, useHistory} from 'react-router-dom'
-import { setUser } from '../../redux/user/userActions';
-import { useParams } from 'react-router-dom';
-import { addProduct } from '../../redux/cart/cartActions'
+
 
 const Card =(props) => {
-    const dispatch = useDispatch();
     const { card = {} } = props
     const { name, description, prices, photos, category, url, featured, id } = card;
     const [price,setPrice] = useState(prices?.[0]?.price)
@@ -19,14 +15,6 @@ const Card =(props) => {
     const isProductInCart =
     cart.findIndex((cartProduct) => cartProduct.id === id) >= 0;
 
-
-    const addNewProduct =() => {
-        const newProduct = {
-            ...card, price
-        }
-
-        dispatch(addProduct(newProduct))
-    }
 
     return (
         <div className="product_card">
@@ -56,7 +44,7 @@ const Card =(props) => {
             </div>
 
             <Link to={`/producto/${url}`}>
-            <button isProductInCart={isProductInCart} onClick={addNewProduct} className="main_btn">Ver producto</button>
+            <button isProductInCart={isProductInCart} className="main_btn">Ver producto</button>
             </Link>
             </div>
             </div>
