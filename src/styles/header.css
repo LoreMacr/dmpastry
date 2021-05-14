@@ -156,7 +156,7 @@ Link img{
       display: block; 
   
     }
-  
+
   }
   
   @media screen and (max-width: 600px){
@@ -184,13 +184,10 @@ Link img{
       height: 240px;
     }
     
-    .hero {
-      margin-top: -170px;
-    }
     
     .slider_title h2{
       padding: 30px 40px;
-      margin-top: 200px;
+      /* margin-top: 200px; */
     }
     
     }

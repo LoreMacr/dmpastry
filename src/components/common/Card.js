@@ -1,12 +1,32 @@
 import React,{useState} from 'react'
-import {Link} from 'react-router-dom'
+import { createObjectById } from '../../services/db';
+import { useDispatch, useSelector } from 'react-redux'
+import {Link, useHistory} from 'react-router-dom'
+import { setUser } from '../../redux/user/userActions';
+import { useParams } from 'react-router-dom';
+import { addProduct } from '../../redux/cart/cartActions'
 
 const Card =(props) => {
-    console.log(props)
+    const dispatch = useDispatch();
     const { card = {} } = props
-    const { name, description, prices, photos, category, url, featured } = card;
+    const { name, description, prices, photos, category, url, featured, id } = card;
     const [price,setPrice] = useState(prices?.[0]?.price)
-    const photo = photos?.[0]  
+    const photo = photos?.[0]
+    const cart = useSelector ((state) => state.cardData.cartItems);
+    const user = useSelector (state => state.user)
+
+
+    const isProductInCart =
+    cart.findIndex((cartProduct) => cartProduct.id === id) >= 0;
+
+
+    const addNewProduct =() => {
+        const newProduct = {
+            ...card, price
+        }
+
+        dispatch(addProduct(newProduct))
+    }
 
     return (
         <div className="product_card">
@@ -36,7 +56,7 @@ const Card =(props) => {
             </div>
 
             <Link to={`/producto/${url}`}>
-            <button className="main_btn">Ver producto</button>
+            <button isProductInCart={isProductInCart} onClick={addNewProduct} className="main_btn">Ver producto</button>
             </Link>
             </div>
             </div>

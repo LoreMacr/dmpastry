@@ -4,9 +4,9 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  z-index: 100;
+  z-index: 100; */
   }
 
   .title_cart {
@@ -53,6 +53,8 @@
     padding-top: 10px;
     margin-right: 60px;
     width: 115px;
+    font-size: 20px;
+    font-weight: 200;
   }
    
   .description span {
@@ -118,7 +120,7 @@
     font-size: 24px;
     color: #43484D;
     font-weight: 400;
-    align-self: flex-endnpm;
+    align-self: flex-end;
   }
 
   @media (max-width: 800px) {

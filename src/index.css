@@ -132,6 +132,10 @@ p.page_titles{
   margin-right: 12px;
 }
 
+a:active, :-ms-input-placeholder, ::-ms-input-placeholder  {
+  color: #8a73ff;
+  }
+
 .main_btn{
   width: 100%;
   background-color: #f79db8; 
@@ -274,6 +278,12 @@ p.page_titles{
     margin-top: 80px;
   }
 
+
+  .trans{
+    margin-top: 300px;
+  }
+
+
   .content_products {
     padding-top: 40px;
 
@@ -289,6 +299,10 @@ p.page_titles{
 
   .secondary_btn {
       width: 80%;
+    }
+
+    .hero .trans{
+      margin-top: -170px;
     }
 
 
