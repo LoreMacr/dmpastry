@@ -39,8 +39,8 @@ function Header() {
 
   return (
     <>
+    <div className="header_container">
     <Navbar />
-    <div className="HeaderWrapper">
         <Link to="/"><img className="hero_logo" src="/img/1-icons-logo.svg"/>
         </Link>
         <MenuButton open={open} handleClick={handleClick} />

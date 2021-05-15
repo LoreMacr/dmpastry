@@ -1,5 +1,5 @@
-.HeaderWrappper{
-  display: none;
+.header_container{
+  padding-top: 30px;
 }
 
 img.icon {
@@ -7,23 +7,9 @@ img.icon {
   width: 24px;
 }
 
-
 ul{
   flex-direction: row;
 }
-
-  /* .navbar{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      background: #fff0f5;
-      position: fixed;
-      top: 10vh;
-      width: 100%;
-      height: 90vh;
-      transition: right 0.3s linear;
-  } */
   
 .navbar{
   position: inherit;
@@ -83,10 +69,12 @@ Link img{
       padding: 0;
     }
     .hero_logo {
-      margin: 70px auto;
-      width: 25%;
-      min-width: 120px;
+      margin: 60px auto;
+      min-width: 150px;
       position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
     }
     
     
@@ -101,30 +89,43 @@ Link img{
   .navbar_close{
       display: none;
 }
-  
+  .photo_view img{
+    width: 25%;
+  }
   
 .MenuButtonWrapper{
     border: none;
     position: absolute;
     left: 95%;
-    margin-top: 3.4rem;
+    margin-top: 5rem;
     margin-right: 2rem;
     
-      @media screen and (max-width: 860px){
-        display: none;
-      }
 }
   
   
   @media screen and (max-width: 860px){
 
+    .MenuButtonWrapper {
+      border: none;
+      position: absolute;
+      left: 87%;
+      margin-top: 1.8rem;
+
+    }
+
+    .header_container {
+      padding-top: 0;
+  }
+
     li{
       padding-bottom: 40px;
       margin-right: 12px;
     }
-    .hero_logo{
-      width: 30%; 
+    .hero_logo {
+      margin: 10px auto;
+      width: 120px;
     }
+
     .content_fav{
       flex-direction: row;
     }
@@ -151,20 +152,13 @@ Link img{
       font-size: 24px;
     }
   
-    .slider_title h2{
-      margin-top: 260px;
-      font-size: 9.5em;
-    }
   
     .see_more Link, img {
       margin: auto;
       display: block; 
   
     }
-  
-    
-      
-  
+
   }
   
   @media screen and (max-width: 600px){
@@ -175,7 +169,10 @@ Link img{
       justify-content: space-between;
       align-items: center;
       }
+      .MenuButtonWrapper {
+        left: 85%;
   
+      }
       .navbar{
         flex-direction: row;
         position: initial;
@@ -189,14 +186,10 @@ Link img{
       height: 240px;
     }
     
-    .hero {
-      margin-top: -170px;
-    }
     
     .slider_title h2{
       padding: 30px 40px;
-      font-size: 7em;
-      margin-top: 200px;
+      /* margin-top: 200px; */
     }
     
     }

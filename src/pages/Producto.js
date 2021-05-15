@@ -1,16 +1,21 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { addProduct } from '../redux/cart/cartActions'
+import { show } from '../redux/showCart/showCartActions'
+import {getDocsByQuery} from '../services/db'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import {getDocsByQuery} from '../services/db'
 import '../styles/product.css'
 
 
 const Producto = (props) => {
+    const dispatch = useDispatch();
     const { url } = useParams();
-    console.log(url)
+
     const [product,setProduct] = useState ({}) 
-    console.log(product)
+
+    const cart = useSelector ((state) => state.cardData.cartItems);
 
     const { name, description, prices, photos, category, featured } = product;
     const [price,setPrice] = useState('')
@@ -27,6 +32,18 @@ const Producto = (props) => {
     useEffect(() => {
         getProduct()
     },[url])
+
+
+    const addNewProduct =() => {
+        const newProduct = {
+            ...product, price
+        }
+
+        dispatch(addProduct(newProduct))
+        console.log("addProduct")
+        dispatch(show())
+    }
+
 
     return (
         <>
@@ -56,7 +73,7 @@ const Producto = (props) => {
 
             <h4>${price}</h4>
                 </div>
-                <button className="main_btn">Comprar</button>
+                <button onClick={addNewProduct}  className="main_btn">Comprar</button>
             </div>
             <hr/>
             <div className="sending_info">

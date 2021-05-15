@@ -1,9 +1,12 @@
 import React from 'react';
-import firebase from 'firebase/app'
 import ReactDOM from 'react-dom';
+import firebase from "firebase/app";
 import './index.css';
 import App from './App';
+import ReduxProvider from './redux';
 import reportWebVitals from './reportWebVitals';
+
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -15,11 +18,15 @@ const firebaseConfig = {
   appId: "1:1004045429794:web:84c334b44ef1036db7ee7b",
   measurementId: "G-QDZ82KPQKS"
 };
+
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReduxProvider>
+        <App />
+    </ReduxProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

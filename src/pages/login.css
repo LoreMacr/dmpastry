@@ -1,0 +1,49 @@
+.container_login{
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+.icon_section{
+    width: 50%;
+    background: #ff6b9c;
+    height: 100%;
+    
+}
+
+.quote h1{
+    font-size: 15em;
+    color: #ffffff;
+}
+
+.contariner_form{
+    right: 0;
+    
+}
+
+.form_logo{
+    width: 20px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+input{
+    background-color: white;
+    border: 1px solid #fcb9d0b8;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+::placeholder {
+    color: rgb(208, 200, 207);
+}
+
+label{
+    display:block; 
+    margin-bottom: 10px;
+}
+

@@ -20,21 +20,14 @@ body{
 }
 
 .hero {
-  position: relative;
-  width: 100%;
-  margin-bottom: 80px;
+  background-color: #ffb7c2b8;
+  margin-top: 220px;
   
 }
 
-  .trans{
-    background-color:#ffb7c2b8;
-    position:absolute;
-    z-index: 1;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-  }
+.container_infos{
+  margin-top: 20%;
+}
 
 /* SLIDER */
 
@@ -44,12 +37,15 @@ body{
 
 
 .slider_title h2{
+  margin-left: 5%;
   padding: 60px 20px;
   display: flex;
-  font-size: 12em;
+  font-size: 16em;
   line-height: 1.1;
   margin-top: 150px;
-  color: #ebabc0;
+  color: #eeaabc;
+  z-index: 1;
+  top: 133px;
 }
 
 /* SECCION FAVORITOS */
@@ -76,11 +72,11 @@ p.page_titles{
   justify-content: center;
   align-content: center;
   margin-bottom: 40px;
-  margin-top: 80px;
+  margin-top: 191px;
 }
 
 .product_card{
-  width: 260px;
+  width: 360px;
 
 }
 .product_card_img_container {
@@ -140,6 +136,10 @@ p.page_titles{
   margin-right: 12px;
 }
 
+a:active, :-ms-input-placeholder, ::-ms-input-placeholder  {
+  color: #8a73ff;
+  }
+
 .main_btn{
   width: 100%;
   background-color: #f79db8; 
@@ -189,7 +189,9 @@ p.page_titles{
   font-family: 'Josefin Sans', sans-serif;
 }
 
-
+.container_featured img{
+  width: 80%;
+}
 
 /* SOCIAL MEDIA */
 
@@ -254,7 +256,9 @@ p.page_titles{
 /* TODOS LOS PRODUCTOS */
 .content_products{
   margin-bottom: 80px;
+  padding-top: 60px;
 }
+
 .all_products_cards{
   margin: 0 5%;
   display: flex;
@@ -267,6 +271,28 @@ p.page_titles{
 
 @media screen and (max-width: 860px){
 
+  .hero{
+    margin-bottom: 60px;
+    margin-top: 100px;
+  }
+
+
+  .slider_title h2 {
+    font-size: 4em;
+    margin-top: 80px;
+  }
+
+
+  .trans{
+    margin-top: 300px;
+  }
+
+
+  .content_products {
+    padding-top: 40px;
+
+  }
+
   .content_new {
     margin: 80px 0;
   }
@@ -277,6 +303,10 @@ p.page_titles{
 
   .secondary_btn {
       width: 80%;
+    }
+
+    .hero .trans{
+      margin-top: -170px;
     }
 
 

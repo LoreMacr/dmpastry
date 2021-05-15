@@ -1,32 +1,37 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Login from './pages/login';
-import Home from './pages/index';
-import Productos from './pages/Productos'
-import Producto from './pages/Producto'
-import Featured from './pages/Featured'
-import Header from './Header';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { setUser, clearUser } from './redux/user/userActions';
+import Routes from './routes';
+import { registerAuthObserver } from './services/auth';
+import { getUserProfile } from './controllers/user';
+
+const App = () => {
+  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    registerAuthObserver(async (user) => {
+      if (user) {
+        console.log('Login done: ', user);
+        const userProfile = await getUserProfile(user.uid);
+        dispatch(setUser(userProfile))
+      } else {
+        console.log('Logoff done: ');
+        dispatch(clearUser());
+      }
+      setIsLoading(false)
+    }) 
+  }, []);
+
+  if (isLoading) return <>Ammmm...</>;
 
 
-export default function App() {
   return (
-    <Router>
-      <Header />
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/productos" component={Productos}/>
-          <Route path="/producto/:url" component={Producto} />
-          <Route exact path="/featured" component={Featured}/>
-        </Switch>
-        
-    </Router>
-  );
-}
+    <div>
+      <Routes />
+    </div>
+    );
+  }
 
+  export default App

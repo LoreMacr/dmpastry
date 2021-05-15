@@ -3,9 +3,8 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#86939E;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#C1AEE1;}
 </style>
 <desc>Created with Sketch.</desc>
-<rect y="4.5" class="st0" width="10" height="1.1"/>
-<rect y="4.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 10 8.881784e-16)" class="st0" width="10" height="1.1"/>
+<polygon class="st0" points="10,4.5 5.5,4.5 5.5,0 4.4,0 4.4,4.5 0,4.5 0,5.6 4.4,5.6 4.4,10 5.5,10 5.5,5.6 10,5.6 "/>
 </svg>

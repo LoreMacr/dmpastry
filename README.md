@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+E-commerce de pasteles
+## Variables
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Primary color: green
+Secondary: grey
+Grey
+wrapper width:
+width: 85%
+margin: 0 auto
+Breakpoints:
+mobile 0 - 768
+tablet 768 - 1200 @media all and (min-width: 768px)
+desktop 1200 - oo @media all and (min-width: 1200px)
+Componentes comunes
+### Header Lorena
 
-## Available Scripts
+Desktop: flex-row
+Tablet: flex-row
+Mobile: Menu Separar el logo del nav Media queries para mostrar y ocultar el nav y el burguer button.
+### Cards Zoe
 
-In the project directory, you can run:
+Desktop: width: 30%
+Tablet: width: 45%
+Mobile: width: 100%
+### Footer top
 
-### `npm start`
+Dektop: flex-row
+Tablet y mobile: flex-column
+Footer left: title + ul
+Footer right: cámara
+### Footer bottom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Dektop: flex-row
+Tablet y mobile: flex-column
+Componentes particulares
+Home Hero
+Img BG para todo el contenedor y dentro el wrapper
+home hero left: text + buttons
+home hero right (solo desktop): imagen con mano y móvil.
+H1, H2, buttons -> flex-row (desktop y tablet) flex-column (mobile)
+About main
+Dektop: flex-row
+Tablet y mobile: flex-column
+Contact main
+Dektop: flex-row
+Tablet y mobile: flex-column
+Form
+Label + input
+Maquetacion
+Styles
+_vars.scss
+_header.scss
+_footer.scss
+_card.scss
+_accordeon.scss
+_form.scss
+### HOME index.html
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+header
 
-### `npm test`
+hero
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+card container + cards
 
-### `npm run build`
+footer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+index.scss
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_header.scss
+_footer.scss
+_card.scss
+estilos para hero y card container
+About
+about.html
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+header
 
-### `npm run eject`
+about container
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+accordeon
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+card
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+footer
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+about.scss
 
-## Learn More
+_header.scss
+_footer.scss
+_card.scss
+estilos about container + accordeon
+Contact
+contact.html
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+header
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+contact container
 
-### Code Splitting
+form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+card
 
-### Analyzing the Bundle Size
+footer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+contact.scss

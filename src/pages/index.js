@@ -1,22 +1,23 @@
 import {listCollection} from '../services/db'
 import {useEffect,useState} from 'react'
 import {Link} from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/common/Card'
 import Instagram from '../components/Instagram/Instagram'
-import Cart from '../components/Cart/Cart'
 
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCCTvy_4JFijlmkcsyiXZ5tpW88qKoWT1Y",
+//   authDomain: "clover-lorena.firebaseapp.com",
+//   projectId: "clover-lorena",
+//   storageBucket: "clover-lorena.appspot.com",
+//   messagingSenderId: "1004045429794",
+//   appId: "1:1004045429794:web:84c334b44ef1036db7ee7b",
+//   measurementId: "G-QDZ82KPQKS"
+// };
 
-// const Home = () => {
-//   return(
-//     <div>
-//       Home
-//     </div>
-//   )
-// }
-
-// export default Home
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
 function HomePage() {
   
@@ -53,13 +54,11 @@ function HomePage() {
   
   return (
     <div>
-    <Navbar/>
     <div className="hero" >
           <div className="slider_title h2">
-            <h2>Un dulce antojo</h2>
-          </div>
-          <div className="trans"/>
-          </div>
+            <h2>Un dulce<br/>antojo</h2>
+      </div>   
+    </div>
     <p className='page_titles'>Favoritos</p>
     <div className="content_fav">
     {
@@ -69,7 +68,6 @@ function HomePage() {
       })
     }
     </div>
-    <Cart/>
     <Link className='see_all' to="/productos">Ver todos los pasteles<img className='icon_arrow' src="/img/right.svg"/></Link> 
       <p className='page_titles'>Love</p>
       <div className="container_featured">
